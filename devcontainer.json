@@ -1,0 +1,21 @@
+{
+    "name": "SkyWater PDK Development",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {},
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-vscode.makefile-tools",
+                "github.copilot"
+            ]
+        }
+    },
+    "postCreateCommand": "bash /workspaces/setup_skywater.sh",
+    "remoteUser": "vscode"
+}
